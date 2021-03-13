@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "SchoolTask"
+  "defaultProject": "SchoolTask",
+  "cli": {
+    "analytics": false
+  }
 }
