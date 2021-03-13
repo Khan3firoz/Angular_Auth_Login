@@ -13,6 +13,11 @@ import { SpecialEventsComponent } from './special-events/special-events.componen
 import { AuthService } from './auth.service';
 import { EventService } from './event.service';
 import { TokenInterceptorService } from './token-interceptor.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table'
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { SyllabusComponent } from './syllabus/syllabus.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -21,15 +26,18 @@ import { TokenInterceptorService } from './token-interceptor.service';
     LoginComponent,
     RegisterComponent,
     EventsComponent,
-    SpecialEventsComponent
+    SpecialEventsComponent,
+    SyllabusComponent,
+    NavbarComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,MatTableModule,MatSidenavModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
-  providers: [AuthService, AuthGuard, EventService, 
+  providers: [AuthService, AuthGuard, EventService,
   {
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptorService,

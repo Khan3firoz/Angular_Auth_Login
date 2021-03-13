@@ -1,0 +1,15 @@
+<div class="block">
+    <div class="dashboard">
+      <div class="avtar">
+
+      </div>
+      <span style="margin-left: 100px;color: rgb(252, 247, 247);font-size: large;">Name</span>
+      <div class="routers" style="margin-left: 30px;margin-top: 50px;">
+        <ul>
+          <li ><a  routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+          <li><a href="">Account</a></li>
+          <li><a routerLink="/syllabus">Syllabus</a></li>
+          <li><a style="cursor:pointer" *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Logout</a></li>
+        </ul>
+      </div>
+    </div>

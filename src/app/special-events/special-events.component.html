@@ -1,14 +1,39 @@
-<div class="row mt-5">
-    <div class="col-md-4 mb-3" *ngFor="let event of specialEvents">
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="card-title">{{event.name}}</h5>
-          <p class="card-text">{{event.description}}</p>
-          <a href="#" class="btn btn-success">Buy Tickets</a>
-        </div>
-        <div class="card-footer text-muted">
-          {{event.date | date:'shortDate'}}
-        </div>
-      </div>
+  <div style="margin-top: 5%;">
+    <div style="margin-left: 1100px;">
+      <button class="btn btn-primary" (click)="buttonClicked()">Add</button>
+      <button class="btn btn-primary">Delete</button>
     </div>
+
+    <table class="table" style="margin-left: 250px;width: 1100px;">
+      <thead>
+        <tr>
+          <th scope="col">School Name</th>
+          <th scope="col">Board</th>
+          <th scope="col">Medium</th>
+          <th scope="col">Class</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <th><input type="text" [(ngModel)]="school" placeholder="school" /></th>
+        <th><input type="text" [(ngModel)]="board" placeholder="board" /></th>
+        <th><input type="text" [(ngModel)]="medium" placeholder="medium" /></th>
+        <th><input type="text" [(ngModel)]="classes" placeholder="classes" /></th>
+      </tbody>
+      <tbody>
+
+        <tr *ngFor="let event of rows">
+          <td>{{event.school}}</td>
+          <td>{{event.board}}</td>
+          <td>{{event.medium}}</td>
+          <td>{{event.classes}}</td>
+          <td> <button class='btn btn-danger' ng-click="deleteRow($index)">Delete</button> </td>
+          <td><a href="">edit</a></td>
+
+        </tr>
+      </tbody>
+    </table>
   </div>
+
+
+

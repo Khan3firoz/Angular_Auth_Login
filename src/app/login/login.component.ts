@@ -11,7 +11,7 @@ import { Router } from '@angular/router'
 export class LoginComponent implements OnInit {
 
   loginUserData:any = {}
-
+  currentUser:any={}
   constructor(private _auth: AuthService,
               private _router: Router) { }
 
@@ -23,10 +23,12 @@ export class LoginComponent implements OnInit {
     .subscribe(
       res => {
         localStorage.setItem('token', res.token)
-        this._router.navigate(['/special'])
+        this._router.navigate(['/dashboard'])
+        this.currentUser=res
       },
       err => console.log(err)
     )
   }
+
 
 }

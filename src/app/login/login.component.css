@@ -1,0 +1,24 @@
+.login{
+    position: absolute;
+    /* margin-top: 15%;
+    margin-left: 40%; */
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+input{
+    height: 30px;
+    width: 300px;
+    text-align: center;
+    font-size: large;
+}
+button{
+    margin-left: 100px;
+    margin-top: 70px;
+    height: 30px;
+    width: 150px;
+    border-radius: 8px;
+    font-size: large;
+    background-color: orange;
+    border: 0;
+}
